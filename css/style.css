@@ -525,3 +525,15 @@ main {
     font-size: 0.85rem;
     white-space: nowrap;
 }
+
+/* =========================================
+   11. STATUS DE MENSAGENS
+========================================= */
+.status-message {
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+}
+
+.status-message:empty {
+    display: none;
+}
