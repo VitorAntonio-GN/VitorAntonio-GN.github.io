@@ -113,3 +113,48 @@ function renderizarFiltros() {
         elementos.filtro.append(botao);
     });
 }
+
+/* =========================================
+   5. RENDERIZAÇÃO DOS PROJETOS
+========================================= */
+
+function renderizarProjetos() {
+    const projetosFiltrados = estado.projetos.filter(projeto => {
+        return estado.linguagemSelecionada === ""
+            || projeto.linguagem === estado.linguagemSelecionada;
+    });
+
+    elementos.lista.replaceChildren();
+
+    if (projetosFiltrados.length === 0) {
+        elementos.lista.textContent = "Nenhum projeto encontrado.";
+        return;
+    }
+
+    projetosFiltrados.forEach(projeto => {
+        const card = document.createElement("article");
+        card.classList.add("projeto");
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = projeto.nome;
+
+        const descricao = document.createElement("p");
+        descricao.textContent = projeto.descricao;
+
+        const criacao = document.createElement("p");
+        criacao.textContent = formatarData(projeto.dataCriacao);
+
+        const linguagem = document.createElement("p");
+        linguagem.textContent = projeto.linguagem;
+
+        const link = document.createElement("a");
+        link.href = projeto.link;
+        link.textContent = "Ver projeto";
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        card.append(titulo, descricao, criacao, linguagem, link);
+
+        elementos.lista.append(card);
+    });
+}
