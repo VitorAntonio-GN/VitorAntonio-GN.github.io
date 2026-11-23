@@ -1,0 +1,93 @@
+[
+    {
+        "nome": "Praticando com Collections e Outras Classes Úteis do Java",
+        "instituicao": "DIO",
+        "dataConclusao": "2026-01",
+        "credencial": "GDZP2NC2",
+        "urlCredencial": "https://www.dio.me/certificate/GDZP2NC2/share"
+    },
+    {
+        "nome": "Princípios de Desenvolvimento de Aplicações",
+        "instituicao": "DIO",
+        "dataConclusao": "2026-01",
+        "credencial": "IVGNEPWM",
+        "urlCredencial": "https://www.dio.me/certificate/IVGNEPWM/share"
+    },
+    {
+        "nome": "Sintaxe Básica com Java",
+        "instituicao": "DIO",
+        "dataConclusao": "2025-12",
+        "credencial": "RSF9ICBX",
+        "urlCredencial": "https://www.dio.me/certificate/RSF9ICBX/share"
+    },
+    {
+        "nome": "Versionamento de Código com Git e GitHub",
+        "instituicao": "DIO",
+        "dataConclusao": "2025-12",
+        "credencial": "OIJGWUKA",
+        "urlCredencial": "https://www.dio.me/certificate/OIJGWUKA/share"
+    },
+    {
+        "nome": "Web Development Fundamentals",
+        "instituicao": "IBM",
+        "dataConclusao": "2025-08",
+        "credencial": "ed223118-4818-4ed7-981a-47eebc81dcba",
+        "urlCredencial": "https://www.credly.com/badges/ed223118-4818-4ed7-981a-47eebc81dcba"
+    },
+    {
+        "nome": "Imersão Dados com Python",
+        "instituicao": "Alura",
+        "dataConclusao": "2025-08",
+        "credencial": "94578911-c008-40de-85b3-aebba9e5b3a4",
+        "urlCredencial": "https://cursos.alura.com.br/immersion/certificate/94578911-c008-40de-85b3-aebba9e5b3a4"
+    },
+    {
+        "nome": "Fundamentals of Javascript through rock-paper-scissors",
+        "instituicao": "Cognitive Class",
+        "dataConclusao": "2025-08",
+        "credencial": "cca06d10b4014592883a16205ca26677",
+        "urlCredencial": "https://courses.cognitiveclass.ai/certificates/cca06d10b4014592883a16205ca26677"
+    },
+    {
+        "nome": "Create a Simple Web Page with HTML in 10 minutes",
+        "instituicao": "Cognitive Class",
+        "dataConclusao": "2025-08",
+        "credencial": "5cca3c38a97a49b5ae6bece2ca71d9ac",
+        "urlCredencial": "https://courses.cognitiveclass.ai/certificates/5cca3c38a97a49b5ae6bece2ca71d9ac"
+    },
+    {
+        "nome": "Discover",
+        "instituicao": "Rocketseat",
+        "dataConclusao": "2025-08",
+        "credencial": "474d0f16-5a67-4d19-9c79-2513c7a5e9be",
+        "urlCredencial": "https://app.rocketseat.com.br/certificates/474d0f16-5a67-4d19-9c79-2513c7a5e9be"
+    },
+    {
+        "nome": "Python",
+        "instituicao": "Mimo",
+        "dataConclusao": "2025-08",
+        "credencial": null,
+        "urlCredencial": null
+    },
+    {
+        "nome": "Introdução a Lógica de Programação com Python",
+        "instituicao": "Universidade do Estado de Minas Gerais",
+        "dataConclusao": "2025-05",
+        "credencial": null,
+        "urlCredencial": null
+    },
+    {
+        "nome": "BD Acelera Ideação",
+        "instituicao": "BD Tech Hub",
+        "dataConclusao": "2024-10",
+        "credencial": null,
+        "urlCredencial": null
+    },
+    {
+        "nome": "TecNotazz 2024",
+        "instituicao": "Notazz",
+        "dataConclusao": "2024-10",
+        "credencial": null,
+        "urlCredencial": null
+    }
+]
