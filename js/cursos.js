@@ -81,3 +81,41 @@ function ordenarCursos(cursos) {
         return dataB - dataA;
     });
 }
+
+/* =========================================
+   4. CRIAÇÃO DE ELEMENTOS
+========================================= */
+
+function criarElemento(tag, texto) {
+    const elemento = document.createElement(tag);
+
+    elemento.textContent = texto;
+
+    return elemento;
+}
+
+function criarLinkCredencial(urlCredencial) {
+    if (typeof urlCredencial !== "string" || !urlCredencial.trim()) {
+        return null;
+    }
+
+    let url;
+
+    try {
+        url = new URL(urlCredencial);
+    } catch {
+        return null;
+    }
+
+    if (!["http:", "https:"].includes(url.protocol)) {
+        return null;
+    }
+
+    const link = criarElemento("a", "Ver credencial");
+
+    link.href = url.href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    return link;
+}
