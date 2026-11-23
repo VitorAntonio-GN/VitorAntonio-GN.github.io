@@ -25,28 +25,85 @@
         </nav>
     </header>
 
-    <!-- Conteúdo principal -->
     <main>
-        <section id="inicio" class="hero">
-            <h1>Vítor Gato</h1>
+        <!-- Apresentação -->
+        <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+            <div class="hero__content">
+                <p class="hero__eyebrow">Engenharia da Computação · UEMG</p>
+                <h1 id="titulo-inicio">Vítor Gato</h1>
+                <h2>Estudante de Engenharia da Computação</h2>
+                <p class="hero__description">
+                    Desenvolvimento de software, programação e tecnologia.
+                    Sempre buscando aprender e transformar ideias em projetos.
+                </p>
+                <p class="hero__location">
+                    Santo Antônio do Monte, Minas Gerais, Brasil
+                </p>
+
+                <div class="hero__links">
+                    <a href="#projetos" class="hero__link-primary">
+                        Conheça meus projetos ↗
+                    </a>
+                    <a href="https://github.com/VitorAntonio-GN"
+                        class="hero__link-secondary"
+                        target="_blank"
+                        rel="noopener">
+                        GitHub ↗
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <section id="sobre" class="content-section">
-            <h2>Sobre mim</h2>
+        <!-- Sobre mim -->
+        <section id="sobre" class="content-section" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre">Sobre mim</h2>
+
+            <p>
+                Sou estudante de Engenharia da Computação na Universidade do Estado
+                de Minas Gerais (UEMG), com interesse em desenvolvimento de software,
+                programação e tecnologia.
+            </p>
+
+            <p>
+                Tenho desenvolvido projetos acadêmicos e pessoais utilizando
+                diferentes linguagens e ferramentas, buscando aprimorar minhas
+                habilidades em programação, resolução de problemas e desenvolvimento
+                de sistemas.
+            </p>
+
+            <p>
+                Estou sempre em busca de novos conhecimentos e oportunidades
+                para aplicar na prática o que aprendo.
+            </p>
         </section>
 
-        <section id="habilidades" class="content-section">
-            <h2>Habilidades e tecnologias</h2>
+        <!-- Habilidades -->
+        <section id="habilidades" class="content-section"
+            aria-labelledby="titulo-habilidades">
+            <h2 id="titulo-habilidades">Habilidades e tecnologias</h2>
+
+            <ul class="skills-list">
+                <li>Java</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML e CSS</li>
+                <li>Git e GitHub</li>
+            </ul>
         </section>
 
+        <!-- Projetos -->
         <section id="projetos" class="content-section">
             <h2>Projetos</h2>
         </section>
 
+        <!-- Cursos -->
         <section id="cursos" class="content-section">
             <h2>Cursos e certificações</h2>
         </section>
 
+        <!-- Contato -->
         <section id="contato" class="content-section">
             <h2>Contato</h2>
         </section>
