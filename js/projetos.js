@@ -158,3 +158,33 @@ function renderizarProjetos() {
         elementos.lista.append(card);
     });
 }
+
+/* =========================================
+   6. INICIALIZAÇÃO
+========================================= */
+
+async function iniciar() {
+    try {
+        elementos.status.textContent = "Carregando projetos...";
+
+        estado.projetos = await buscarProjetos();
+
+        estado.projetos = ordenarProjetos(estado.projetos);
+
+        renderizarFiltros();
+        renderizarProjetos();
+
+        elementos.status.textContent =
+            `${estado.projetos.length} projetos carregados.`;
+
+        elementos.status.remove();
+
+    } catch (erro) {
+        console.error("Falha ao carregar projetos:", erro);
+
+        elementos.status.textContent =
+            "Não foi possível carregar os projetos. Tente novamente mais tarde.";
+    }
+}
+
+iniciar();
