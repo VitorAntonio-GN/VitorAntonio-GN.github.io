@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vítor Gato | Portfólio de Engenharia da Computação</title>
+    <meta name="description" content="Portfólio de Vítor Gato, estudante de Engenharia da Computação na UEMG, com projetos acadêmicos e pessoais na área de tecnologia.">
+    <meta name="author" content="Vítor Gato">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Vítor Gato | Portfólio">
+    <meta property="og:description" content="Conheça meus projetos, habilidades e trajetória na Engenharia da Computação.">
+
+    <!-- Favicon, fontes e estilos -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <a class="site-header__brand" href="#inicio">Vítor Gato</a>
+        <nav class="primary-navigation" aria-label="Navegação principal">
+            <ul class="primary-navigation__list">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Apresentação -->
+        <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+            <div class="hero__background" aria-hidden="true"></div>
+
+            <div class="hero__content">
+                <p class="hero__eyebrow">Engenharia da Computação · UEMG</p>
+                <h1 id="titulo-inicio">Vítor Gato</h1>
+                <h2>Estudante de Engenharia da Computação</h2>
+                <p class="hero__description">Desenvolvimento de software, programação e tecnologia. Sempre buscando aprender e transformar ideias em projetos.</p>
+                <p class="hero__location">Santo Antônio do Monte, Minas Gerais, Brasil</p>
+                <div class="hero__links">
+                    <a href="#projetos" class="hero__link-primary">Conheça meus projetos ↗</a>
+                    <a href="https://github.com/VitorAntonio-GN" class="hero__link-secondary" target="_blank" rel="noopener">GitHub ↗</a>
+                </div>
+            </div>
+
+            <!-- Computador (decoração) -->
+            <div class="hero__visual" aria-hidden="true">
+                <div class="computer">
+                    <div class="computer__screen">
+                        <div class="computer__screen-glow"></div>
+                        <div class="computer__window">
+                            <div class="computer__window-bar"><span></span><span></span><span></span></div>
+                            <div class="computer__code">
+                                <span><i>01</i> const developer = {</span>
+                                <span><i>02</i> &nbsp;&nbsp;name: "Vítor",</span>
+                                <span><i>03</i> &nbsp;&nbsp;passion: "technology",</span>
+                                <span><i>04</i> &nbsp;&nbsp;learning: true,</span>
+                                <span><i>05</i> };</span>
+                                <span class="computer__cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="computer__chin"><span>VG</span></div>
+                    <div class="computer__stand"></div>
+                    <div class="computer__base"></div>
+                </div>
+                <p class="hero__visual-caption">ENGINEERING · DEVELOPMENT · TECHNOLOGY</p>
+            </div>
+
+            <div class="hero__transition" aria-hidden="true">
+                <div class="hero__transition-glow"></div>
+            </div>
+        </section>
+
+        <!-- Sobre mim -->
+        <section id="sobre" class="content-section" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre">Sobre mim</h2>
+            <p>
+                Sou estudante de Engenharia da Computação na Universidade do Estado de Minas Gerais (UEMG),
+                com interesse em desenvolvimento de software, programação e tecnologia.
+            </p>
+            <p>
+                Tenho desenvolvido projetos acadêmicos e pessoais utilizando diferentes linguagens e ferramentas,
+                buscando aprimorar minhas habilidades em programação, resolução de problemas e desenvolvimento de sistemas.
+            </p>
+            <p>Estou sempre em busca de novos conhecimentos e oportunidades para aplicar na prática o que aprendo.</p>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="content-section" aria-labelledby="titulo-habilidades">
+            <h2 id="titulo-habilidades">Habilidades e tecnologias</h2>
+            <ul class="skills-list">
+                <li>Java</li>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>HTML e CSS</li>
+                <li>Git e GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Projetos (preenchido por js/projetos.js) -->
+        <section id="projetos" class="content-section" aria-labelledby="titulo-projetos">
+            <h2 id="titulo-projetos">Projetos</h2>
+            <div class="projects-filter">
+                <div id="filtro-linguagem" class="language-filters"></div>
+            </div>
+            <p id="status-projetos" class="status-message" role="status"></p>
+            <div id="lista-projetos" class="projects-list"></div>
+        </section>
+
+        <!-- Cursos (preenchido por js/cursos.js) -->
+        <section id="cursos" class="content-section" aria-labelledby="titulo-cursos">
+            <h2 id="titulo-cursos">Cursos e certificações</h2>
+            <p id="status-cursos" class="status-message" role="status"></p>
+            <div id="lista-cursos" class="courses-list"></div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="content-section contact-section" aria-labelledby="titulo-contato">
+            <div class="contact-section__content">
+                <p class="contact-section__eyebrow">TEM UM PROJETO OU OPORTUNIDADE?</p>
+                <h2 id="titulo-contato">Vamos conversar?</h2>
+                <p class="contact-section__description">
+                    Estou aberto a novas oportunidades, projetos e conexões.
+                    Entre em contato ou acompanhe meu trabalho.
+                </p>
+                <address class="contact-information">
+                    <ul class="contact-list">
+                        <li><a href="mailto:vitorgatoneto@gmail.com">E-mail <span aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://github.com/VitorAntonio-GN" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/vitorgato" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+                    </ul>
+                </address>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Vítor Gato. Todos os direitos reservados.</p>
+    </footer>
+
+    <script type="module" src="js/projetos.js"></script>
+    <script type="module" src="js/cursos.js"></script>
+</body>
+</html>
