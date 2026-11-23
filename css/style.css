@@ -60,3 +60,69 @@ main {
     width: min(var(--container-width), calc(100% - 80px));
     margin: 0 auto;
 }
+
+/* =========================================
+   3. LINKS (cores e hovers compartilhados)
+========================================= */
+.primary-navigation__list a,
+.hero__link-secondary,
+.skills-list li {
+    color: var(--color-text-secondary);
+    transition: color var(--transition);
+}
+
+.primary-navigation__list a:hover,
+.hero__link-secondary:hover {
+    color: var(--color-text);
+}
+
+.hero__link-primary,
+.projeto a,
+.curso a {
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: color var(--transition);
+}
+
+.hero__link-primary:hover,
+.projeto a:hover,
+.curso a:hover {
+    color: var(--color-primary-light);
+}
+
+/* =========================================
+   4. CABEÇALHO E NAVEGAÇÃO
+========================================= */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    padding: 0 40px;
+    background: rgba(0, 0, 0, 0.92);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(12px);
+}
+
+.site-header__brand {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.primary-navigation__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.primary-navigation__list a {
+    font-size: 0.85rem;
+}
