@@ -166,3 +166,34 @@ function renderizarCursos(cursos) {
 
     elementos.lista.append(fragmento);
 }
+
+/* =========================================
+   6. INICIALIZAÇÃO
+========================================= */
+
+async function iniciar() {
+    try {
+        elementos.status.textContent = "Carregando cursos...";
+
+        const cursos = await carregarCursos();
+
+        const cursosOrdenados = ordenarCursos(cursos);
+
+        renderizarCursos(cursosOrdenados);
+
+        elementos.status.textContent =
+            `${cursosOrdenados.length} cursos carregados.`;
+
+        elementos.status.remove();
+
+    } catch (erro) {
+        console.error("Falha ao carregar cursos:", erro);
+
+        elementos.status.textContent =
+            "Não foi possível carregar os cursos.";
+
+        elementos.lista.replaceChildren();
+    }
+}
+
+iniciar();
