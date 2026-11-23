@@ -93,14 +93,28 @@
             </ul>
         </section>
 
-        <!-- Projetos -->
-        <section id="projetos" class="content-section">
-            <h2>Projetos</h2>
+        <!-- Projetos (preenchido por js/projetos.js) -->
+        <section id="projetos" class="content-section"
+            aria-labelledby="titulo-projetos">
+            <h2 id="titulo-projetos">Projetos</h2>
+
+            <div class="projects-filter">
+                <div id="filtro-linguagem" class="language-filters"></div>
+            </div>
+
+            <p id="status-projetos" class="status-message" role="status"></p>
+
+            <div id="lista-projetos" class="projects-list"></div>
         </section>
 
-        <!-- Cursos -->
-        <section id="cursos" class="content-section">
-            <h2>Cursos e certificações</h2>
+        <!-- Cursos (preenchido por js/cursos.js) -->
+        <section id="cursos" class="content-section"
+            aria-labelledby="titulo-cursos">
+            <h2 id="titulo-cursos">Cursos e certificações</h2>
+
+            <p id="status-cursos" class="status-message" role="status"></p>
+
+            <div id="lista-cursos" class="courses-list"></div>
         </section>
 
         <!-- Contato -->
@@ -113,6 +127,9 @@
     <footer class="site-footer">
         <p>&copy; 2026 Vítor Gato. Todos os direitos reservados.</p>
     </footer>
+
+    <script type="module" src="js/projetos.js"></script>
+    <script type="module" src="js/cursos.js"></script>
 </body>
 
 </html>
