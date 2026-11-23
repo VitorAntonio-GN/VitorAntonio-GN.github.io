@@ -42,3 +42,35 @@ async function buscarProjetos() {
         link: projeto.html_url
     }));
 }
+
+/* =========================================
+   3. FUNÇÕES AUXILIARES
+========================================= */
+
+function formatarData(data) {
+    const dataFormatada = new Date(data);
+
+    if (Number.isNaN(dataFormatada.getTime())) {
+        return "Data não disponível";
+    }
+
+    const dataLocalizada = new Intl.DateTimeFormat("pt-BR", {
+        month: "long",
+        year: "numeric"
+    }).format(dataFormatada);
+
+    return dataLocalizada.charAt(0).toLocaleUpperCase("pt-BR")
+        + dataLocalizada.slice(1);
+}
+
+function ordenarProjetos(projetos) {
+    return [...projetos].sort((a, b) =>
+        b.dataCriacao.localeCompare(a.dataCriacao)
+    );
+}
+
+function obterLinguagens(projetos) {
+    return [...new Set(
+        projetos.map(projeto => projeto.linguagem)
+    )].sort((a, b) => a.localeCompare(b));
+}
