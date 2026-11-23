@@ -38,3 +38,46 @@ async function carregarCursos() {
             urlCredencial: curso.urlCredencial ?? ""
         }));
 }
+
+/* =========================================
+   3. FUNÇÕES AUXILIARES
+========================================= */
+
+function converterData(dataConclusao) {
+    if (
+        typeof dataConclusao !== "string" ||
+        !/^\d{4}-(0[1-9]|1[0-2])$/.test(dataConclusao)
+    ) {
+        return null;
+    }
+
+    return new Date(`${dataConclusao}-01T12:00:00`);
+}
+
+function formatarData(dataConclusao) {
+    const data = converterData(dataConclusao);
+
+    if (!data) {
+        return "Data não informada";
+    }
+
+    const dataFormatada = new Intl.DateTimeFormat("pt-BR", {
+        month: "long",
+        year: "numeric"
+    }).format(data);
+
+    return dataFormatada.charAt(0).toLocaleUpperCase("pt-BR")
+        + dataFormatada.slice(1);
+}
+
+function ordenarCursos(cursos) {
+    return [...cursos].sort((a, b) => {
+        const dataA = converterData(a.dataConclusao)?.getTime()
+            ?? Number.NEGATIVE_INFINITY;
+
+        const dataB = converterData(b.dataConclusao)?.getTime()
+            ?? Number.NEGATIVE_INFINITY;
+
+        return dataB - dataA;
+    });
+}
