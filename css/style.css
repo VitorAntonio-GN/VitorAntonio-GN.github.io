@@ -537,3 +537,90 @@ main {
 .status-message:empty {
     display: none;
 }
+
+/* =========================================
+   12. CONTATO
+========================================= */
+.contact-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 100vw;
+    margin: 80px calc(50% - 50vw) 0;
+    padding: clamp(75px, 10vw, 125px) max(24px, calc((100vw - var(--container-width)) / 2));
+    background: var(--color-contact);
+    border: none;
+    color: #FFF;
+}
+
+.contact-section::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -130px;
+    width: 440px;
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.035), 0 0 0 90px rgba(255, 255, 255, 0.025);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.contact-section__content {
+    position: relative;
+    z-index: 1;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 18px 0 18px 18px;
+}
+
+.contact-section__eyebrow {
+    margin: 0 0 24px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-section h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+.contact-section__description {
+    max-width: 540px;
+    margin-top: 22px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.contact-section .contact-information {
+    margin-top: 35px;
+}
+
+.contact-section .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-section .contact-list a {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    font-weight: 650;
+    transition: border-color var(--transition), opacity var(--transition);
+}
+
+.contact-section .contact-list a:hover {
+    opacity: 0.7;
+    border-color: transparent;
+}
