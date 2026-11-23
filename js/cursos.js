@@ -119,3 +119,50 @@ function criarLinkCredencial(urlCredencial) {
 
     return link;
 }
+
+/* =========================================
+   5. RENDERIZAÇÃO DOS CURSOS
+========================================= */
+
+function renderizarCursos(cursos) {
+    elementos.lista.replaceChildren();
+
+    if (cursos.length === 0) {
+        elementos.lista.append(
+            criarElemento("p", "Nenhum curso encontrado.")
+        );
+
+        return;
+    }
+
+    const fragmento = document.createDocumentFragment();
+
+    cursos.forEach(curso => {
+        const card = document.createElement("article");
+        card.classList.add("curso");
+
+        const titulo = criarElemento("h3", curso.nome);
+
+        const conclusao = criarElemento(
+            "p",
+            formatarData(curso.dataConclusao)
+        );
+
+        const instituicao = criarElemento(
+            "p",
+            curso.instituicao
+        );
+
+        card.append(titulo, conclusao, instituicao);
+
+        const link = criarLinkCredencial(curso.urlCredencial);
+
+        if (link) {
+            card.append(link);
+        }
+
+        fragmento.append(card);
+    });
+
+    elementos.lista.append(fragmento);
+}
