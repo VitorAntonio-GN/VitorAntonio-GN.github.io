@@ -237,3 +237,145 @@ main {
         radial-gradient(ellipse 45% 100% at 80% 80%, rgba(79, 125, 255, 0.65) 0%, rgba(36, 76, 203, 0.35) 45%, transparent 100%),
         linear-gradient(to bottom, transparent 0%, rgba(1, 3, 38, 0.8) 65%, var(--color-background) 100%);
 }
+
+/* =========================================
+   6. HERO: COMPUTADOR (decoração)
+========================================= */
+.hero__visual {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 30px 0;
+}
+
+.hero__visual::before {
+    content: "";
+    position: absolute;
+    inset: 5%;
+    background: radial-gradient(circle, rgba(79, 125, 255, 0.16), transparent 70%);
+    filter: blur(45px);
+    pointer-events: none;
+}
+
+.hero__visual-caption {
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+    color: #666A75;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.computer {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 450px;
+    filter: drop-shadow(0 15px 35px rgba(79, 125, 255, 0.08));
+}
+
+.computer__screen {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 1.45;
+    padding: 13px;
+    background: #101014;
+    border: 1px solid #393B47;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(79, 125, 255, 0.08);
+}
+
+.computer__screen-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 10%, rgba(79, 125, 255, 0.14), transparent 60%);
+}
+
+.computer__window {
+    position: relative;
+    height: 100%;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid #282830;
+}
+
+.computer__window-bar {
+    display: flex;
+    gap: 6px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #282830;
+}
+
+.computer__window-bar span {
+    width: 7px;
+    height: 7px;
+    background: #4A4A52;
+    border-radius: 50%;
+}
+
+.computer__code {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 26px;
+    color: #D2D5DF;
+    font-family: monospace;
+    font-size: clamp(0.55rem, 1.2vw, 0.8rem);
+}
+
+.computer__code span i {
+    margin-right: 12px;
+    color: #606778;
+    font-style: normal;
+}
+
+.computer__code span:nth-child(1),
+.computer__code span:nth-child(5) {
+    color: var(--color-primary-light);
+}
+
+.computer__code span:nth-child(3) {
+    color: #A5D6A7;
+}
+
+.computer__cursor {
+    color: var(--color-primary);
+}
+
+.computer__chin {
+    height: 20px;
+    background: linear-gradient(#24242A, #111114);
+    border: 1px solid #393B47;
+    border-top: none;
+}
+
+.computer__chin span {
+    display: block;
+    color: #777985;
+    font-family: var(--font-heading);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.computer__stand {
+    width: 65px;
+    height: 48px;
+    margin: 0 auto;
+    background: linear-gradient(to right, #17171B, #34343B, #17171B);
+    clip-path: polygon(28% 0, 72% 0, 100% 100%, 0 100%);
+}
+
+.computer__base {
+    width: 36%;
+    height: 9px;
+    margin: 0 auto;
+    background: linear-gradient(#34343B, #17171B);
+    border-radius: 50% 50% 3px 3px;
+}
