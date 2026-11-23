@@ -74,3 +74,42 @@ function obterLinguagens(projetos) {
         projetos.map(projeto => projeto.linguagem)
     )].sort((a, b) => a.localeCompare(b));
 }
+
+/* =========================================
+   4. RENDERIZAÇÃO DOS FILTROS
+========================================= */
+
+function renderizarFiltros() {
+    elementos.filtro.replaceChildren();
+
+    const linguagens = obterLinguagens(estado.projetos);
+
+    const opcoes = [
+        { nome: "Todas as linguagens", valor: "" },
+        ...linguagens.map(linguagem => ({
+            nome: linguagem,
+            valor: linguagem
+        }))
+    ];
+
+    opcoes.forEach(opcao => {
+        const botao = document.createElement("button");
+
+        botao.type = "button";
+        botao.textContent = opcao.nome;
+        botao.classList.add("language-filter");
+
+        if (estado.linguagemSelecionada === opcao.valor) {
+            botao.classList.add("active");
+        }
+
+        botao.addEventListener("click", () => {
+            estado.linguagemSelecionada = opcao.valor;
+
+            renderizarFiltros();
+            renderizarProjetos();
+        });
+
+        elementos.filtro.append(botao);
+    });
+}
